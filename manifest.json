@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Fork Off",
+  "version": "1.0",
+  "description": "Overlays a warning on AI-generated images hosted on Forkable",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://forkable.com/*",
+        "https://*.forkable.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+
